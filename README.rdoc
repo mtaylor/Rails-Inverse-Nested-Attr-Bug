@@ -6,13 +6,13 @@ When specifying nested_attributes_for on two associated models with 1 to many re
 
 Executing the following code results in the error:
 
-user = User.new
-address1 = Address.new
-address2 = Address.new
+  user = User.new
+  address1 = Address.new
+  address2 = Address.new
 
-user.addresses << address1
-user.addresses << address2
-user.save
+  user.addresses << address1
+  user.addresses << address2
+  user.save
 
 Where:
 
