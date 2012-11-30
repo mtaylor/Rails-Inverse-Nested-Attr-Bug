@@ -4,7 +4,15 @@ When specifying nested_attributes_for on two associated models with 1 to many re
 
 == Example.
 
-Executing the following code results in the error:
+Everything works fine when we only set 1 associated object:
+
+  user = User.new
+  address1 = Address.new
+
+  user.addresses << address1
+  user.save
+  
+Setting 2 associated objects results in the error:
 
   user = User.new
   address1 = Address.new
