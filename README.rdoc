@@ -4,9 +4,9 @@
 
 There has been a bug filed for this in Rails: https://github.com/rails/rails/issues/7809
 
-I've created a Monkey Patch and placed it under app/patches.  The tests now pass.  To reproduce the error again remove the patch and rerun tests.
+I've created a Monkey Patch based on the pull request submitted as part of the above bug and placed it under app/patches.  The tests now pass.  To reproduce the error again remove the patch and rerun tests.
 
-
+== Problem
 When specifying nested_attributes_for on two associated models with 1 to many rel, with inverse associations set, Rails will raise a SystemStackError when trying persist an instance of the model on the one side of the relationship when it has 2 or more instances of the many model.
 
 == Example.
